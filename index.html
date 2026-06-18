@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMBER — Fine Dining Cairo | Award-Winning Restaurant</title>
+    <meta
+      name="description"
+      content="EMBER is Cairo's most celebrated fine dining destination. Award-winning chefs, open-fire cuisine, and an extraordinary culinary journey. Reserve your table tonight."
+    />
+    <meta name="author" content="Eyad Ashraf" />
+    <meta property="og:title" content="EMBER — Fine Dining Cairo" />
+    <meta
+      property="og:description"
+      content="An extraordinary culinary journey through flame-kissed flavors. Reserve your table at Cairo's most celebrated restaurant."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🔥</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Bebas+Neue&family=Cinzel:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="loading">
+    <!-- ==========
+       PAGE LOADER
+       Shows on every page load. Dismissed by JS once
+       the hero image and fonts are ready.
+      ========== -->
+    <div id="page-loader" role="status" aria-label="Loading EMBER Restaurant">
+      <!-- Animated flame SVG -->
+      <div class="loader-flame">
+        <svg
+          viewBox="0 0 64 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <!-- Inner bright flame core -->
+          <path
+            d="M32 72 C18 72 10 60 10 50 C10 38 20 34 22 24 C22 24 26 32 24 38 C28 32 30 22 28 10 C32 18 36 24 34 34 C38 28 40 20 38 12 C44 22 46 32 42 42 C46 36 50 32 48 22 C54 34 54 44 50 52 C52 50 54 44 52 44 C54 52 54 60 46 68 C42 70 36 72 32 72Z"
+            fill="url(#flameGrad1)"
+          />
+          <!-- Outer flame shape -->
+          <path
+            d="M32 76 C14 76 6 62 6 50 C6 36 18 28 20 16 C20 16 24 28 22 36 C26 28 28 16 26 4 C32 14 38 24 36 36 C40 28 42 18 40 8 C48 20 50 32 46 44 C50 36 54 28 52 16 C60 30 60 46 54 56 C58 52 60 44 58 44 C60 54 58 64 50 70 C44 74 38 76 32 76Z"
+            fill="url(#flameGrad2)"
+            opacity="0.6"
+          />
+          <defs>
+            <linearGradient
+              id="flameGrad1"
+              x1="32"
+              y1="10"
+              x2="32"
+              y2="72"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stop-color="#FFD700" />
+              <stop offset="40%" stop-color="#FF6B35" />
+              <stop offset="100%" stop-color="#FF4500" />
+            </linearGradient>
+            <linearGradient
+              id="flameGrad2"
+              x1="32"
+              y1="4"
+              x2="32"
+              y2="76"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stop-color="#FFA500" stop-opacity="0.8" />
+              <stop offset="100%" stop-color="#FF4500" stop-opacity="0.3" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="loader-name">EMB<b>E</b>R</div>
+      <div class="loader-tagline">Cairo · Fine Dining · Est. 2008</div>
+
+      <!-- Progress bar at the very bottom -->
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+    </div>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cur-r" id="curR"></div>
+    <div class="cur" id="cur">
+      <svg
+        viewBox="0 0 38 38"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <line
+          x1="11"
+          y1="4"
+          x2="11"
+          y2="14"
+          stroke="#FF6B35"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <line
+          x1="8"
+          y1="4"
+          x2="8"
+          y2="10"
+          stroke="#FF6B35"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+        <line
+          x1="14"
+          y1="4"
+          x2="14"
+          y2="10"
+          stroke="#FF6B35"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+        <path
+          d="M8 10 Q11 14 14 10"
+          stroke="#FF6B35"
+          stroke-width="1.6"
+          fill="none"
+          stroke-linecap="round"
+        />
+        <line
+          x1="11"
+          y1="14"
+          x2="11"
+          y2="34"
+          stroke="#C9A84C"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <path
+          d="M26 4 C30 6 30 13 26 15 L26 34"
+          stroke="#C9A84C"
+          stroke-width="2"
+          stroke-linecap="round"
+          fill="none"
+        />
+        <path
+          d="M26 4 C30 6 30 13 26 15"
+          stroke="#FF4500"
+          stroke-width="1.5"
+          fill="rgba(255,69,0,0.15)"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+    <!-- Mobile navigation drawer -->
+    <div
+      class="m-drawer"
+      id="mDrawer"
+      role="dialog"
+      aria-label="Navigation menu"
+    >
+      <a href="#about" class="dl">About</a>
+      <div class="m-divr"></div>
+      <a href="#menu" class="dl">Menu</a>
+      <div class="m-divr"></div>
+      <a href="#chef" class="dl">Chef</a>
+      <div class="m-divr"></div>
+      <a href="#contact-sec" class="dl">Contact</a>
+      <a href="#reservation" class="m-res dl">Reserve a Table</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#" class="n-logo">EMB<b>E</b>R</a>
+      <ul class="n-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#chef">Chef</a></li>
+        <li><a href="#contact-sec">Contact</a></li>
+      </ul>
+      <button class="n-btn" id="navResBtn"><span>Reserve a Table</span></button>
+      <button
+        class="n-ham"
+        id="navHam"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Social sidebar -->
+    <div class="soc" aria-label="Social links">
+      <a href="#" class="soc-d" title="X / Twitter" aria-label="Twitter">𝕏</a>
+      <a href="#" class="soc-d" title="Instagram" aria-label="Instagram">◎</a>
+      <a href="#" class="soc-d" title="Facebook" aria-label="Facebook">𝔽</a>
+    </div>
+
+    <!-- ===== HERO SECTION START ===== -->
+    <section class="hero" id="hero">
+      <!-- Left: text on dark panel -->
+      <div class="hero-left">
+        <div class="hero-tag">Award-Winning · Cairo, Egypt</div>
+        <h1 class="hero-title">
+          <span class="ol">WHERE</span>
+          <em>Fire</em>
+          <span>MEETS ART</span>
+        </h1>
+        <div class="hero-line"></div>
+        <p class="hero-desc">
+          An extraordinary culinary journey through flame-kissed flavors, rare
+          ingredients, and unforgettable moments crafted for the most discerning
+          palates.
+        </p>
+        <div class="hero-urgency">Limited seats available tonight</div>
+        <div class="hero-cta">
+          <a href="#reservation" class="btn-fire"
+            ><span>Reserve Your Table</span></a
+          >
+          <a href="#menu" class="btn-ghost">Explore Menu</a>
+        </div>
+      </div>
+
+      <!-- Right: hero image with skeleton loader -->
+      <div class="hero-right">
+        <div class="hero-right-img" id="heroImg"></div>
+        <div class="hero-frame" aria-hidden="true"></div>
+        <div class="hero-badge" aria-hidden="true">
+          <div class="hero-badge-year">2008</div>
+          <div class="hero-badge-label">Est. Cairo</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Marquee strip -->
+    <div class="mq" aria-hidden="true">
+      <div class="mq-inner">
+        <div class="mq-item">
+          Open Fire Cuisine <span>◆</span> Fine Dining <span>◆</span> Premium
+          Ingredients <span>◆</span> Unforgettable Experience
+          <span>◆</span> Expert Sommelier <span>◆</span> Private Events
+          <span>◆</span>
+        </div>
+        <div class="mq-item">
+          Open Fire Cuisine <span>◆</span> Fine Dining <span>◆</span> Premium
+          Ingredients <span>◆</span> Unforgettable Experience
+          <span>◆</span> Expert Sommelier <span>◆</span> Private Events
+          <span>◆</span>
+        </div>
+      </div>
+    </div>
+    <!-- ===== HERO SECTION END ===== -->
+
+    <!-- ===== ABOUT SECTION START ===== -->
+    <section class="about rv" id="about">
+      <div>
+        <div class="lbl">Our Story</div>
+        <h2 class="sec-title">
+          Passion ignited into<br />every <em>single dish</em>
+        </h2>
+        <p class="body-txt">
+          Born from a relentless obsession with fire and flavor, EMBER redefines
+          what a meal can be. Our chefs transform the finest seasonal
+          ingredients into extraordinary moments of pure culinary poetry.
+        </p>
+        <p class="body-txt">
+          Every dish is a meditation on heat, time, and restraint — a philosophy
+          we've honed across 17 years of pushing boundaries in one of the
+          world's most vibrant dining scenes.
+        </p>
+        <div class="stats">
+          <div class="s-item">
+            <div class="s-num">17+</div>
+            <div class="s-lbl">Years of Excellence</div>
+          </div>
+          <div class="s-item">
+            <div class="s-num">42</div>
+            <div class="s-lbl">Signature Dishes</div>
+          </div>
+          <div class="s-item">
+            <div class="s-num">8</div>
+            <div class="s-lbl">Awards Won</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo collage — each image uses .img-wrap for skeleton loading -->
+      <div class="about-photos">
+        <div class="ap1">
+          <div class="img-wrap">
+            <img
+              src="images/photo-4.webp"
+              alt="Chef cooking with fire"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="ap2">
+          <div class="img-wrap">
+            <img
+              src="images/photo-5.webp"
+              alt="Gourmet dish close-up"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="ap3">
+          <div class="img-wrap">
+            <img
+              src="images/photo-17.webp"
+              alt="Fine dining atmosphere"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="ap-accent" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="div" aria-hidden="true"><div class="div-ico">◆</div></div>
+    <!-- ===== ABOUT SECTION END ===== -->
+
+    <!-- ===== MENU SECTION START ===== -->
+    <section class="menu-sec" id="menu">
+      <div class="sec-hdr rv">
+        <div class="sec-tag">Our Creations</div>
+        <h2 class="ttl">The <em>Menu</em></h2>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="tabs rv" role="tablist" aria-label="Menu categories">
+        <button
+          class="tab on"
+          data-tab="starters"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tab-starters"
+        >
+          Starters
+        </button>
+        <button
+          class="tab"
+          data-tab="mains"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-mains"
+        >
+          Mains
+        </button>
+        <button
+          class="tab"
+          data-tab="desserts"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-desserts"
+        >
+          Desserts
+        </button>
+        <button
+          class="tab"
+          data-tab="wine"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-wine"
+        >
+          Wine List
+        </button>
+      </div>
+
+      <!-- ── Starters ────────────────────────────── -->
+      <div
+        class="menu-panel on menu-grid panel-enter"
+        id="tab-starters"
+        role="tabpanel"
+      >
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-7.webp"
+                alt="Wagyu Tartare"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">01</span>
+          <div class="mc-body">
+            <div class="mc-name">Wagyu Tartare</div>
+            <div class="mc-desc">
+              Hand-cut A5 Wagyu, smoked egg yolk, black truffle, toasted
+              brioche, aged parmesan foam.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,250</span
+              ><span class="mc-pill">Chef's Pick</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-8.webp"
+                alt="Ember Lobster Bisque"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">02</span>
+          <div class="mc-body">
+            <div class="mc-name">Ember Lobster Bisque</div>
+            <div class="mc-desc">
+              Slow-roasted bisque, cognac cream, chive oil, sourdough crostini.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 980</span
+              ><span class="mc-pill">Signature</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-9.webp"
+                alt="Heritage Beet Salad"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">03</span>
+          <div class="mc-body">
+            <div class="mc-name">Heritage Beet Salad</div>
+            <div class="mc-desc">
+              Roasted heirloom beets, whipped labneh, candied walnuts,
+              pomegranate molasses.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 580</span
+              ><span class="mc-pill">Vegetarian</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-10.webp"
+                alt="Sea Bass Crudo"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">04</span>
+          <div class="mc-body">
+            <div class="mc-name">Sea Bass Crudo</div>
+            <div class="mc-desc">
+              Day-boat sea bass, yuzu tiger's milk, jalapeño oil, cucumber
+              pearls, sesame tuile.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 850</span
+              ><span class="mc-pill">Raw Bar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-11.webp"
+                alt="Seared Foie Gras"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">05</span>
+          <div class="mc-body">
+            <div class="mc-name">Seared Foie Gras</div>
+            <div class="mc-desc">
+              Pan-seared duck foie gras, fig jam, brioche toast, aged balsamic
+              reduction.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,100</span
+              ><span class="mc-pill">House Favorite</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-12.webp"
+                alt="Truffle Burrata"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">06</span>
+          <div class="mc-body">
+            <div class="mc-name">Truffle Burrata</div>
+            <div class="mc-desc">
+              Imported burrata, black truffle shavings, heirloom tomatoes, basil
+              oil, Maldon salt.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 720</span
+              ><span class="mc-pill">Seasonal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Mains ──────────────────────────────── -->
+      <div class="menu-panel menu-grid" id="tab-mains" role="tabpanel">
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-23.webp"
+                alt="Dry-Aged Ribeye"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">01</span>
+          <div class="mc-body">
+            <div class="mc-name">Dry-Aged Ribeye</div>
+            <div class="mc-desc">
+              45-day dry-aged Australian Black Angus, bone marrow butter,
+              truffle jus, crispy shallots.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 2,400</span
+              ><span class="mc-pill">Signature</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-24.webp"
+                alt="Wood-Fire Chicken"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">02</span>
+          <div class="mc-body">
+            <div class="mc-name">Wood-Fire Chicken</div>
+            <div class="mc-desc">
+              Free-range chicken, wood-smoked, sumac & lemon butter, roasted
+              vegetables, za'atar jus.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,350</span
+              ><span class="mc-pill">Local Favorite</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-25.webp"
+                alt="Charred Lamb Rack"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">03</span>
+          <div class="mc-body">
+            <div class="mc-name">Charred Lamb Rack</div>
+            <div class="mc-desc">
+              Frenched lamb rack, harissa crust, white bean purée, chimichurri,
+              ember-roasted garlic.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,980</span
+              ><span class="mc-pill">Chef's Pick</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-26.webp"
+                alt="Ember Whole Sea Bass"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">04</span>
+          <div class="mc-body">
+            <div class="mc-name">Ember Whole Sea Bass</div>
+            <div class="mc-desc">
+              Line-caught bass, whole-roasted over coals, citrus-herb butter,
+              seasonal greens.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,650</span
+              ><span class="mc-pill">Catch of the Day</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-27.webp"
+                alt="Vegetable Tasting Plate"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">05</span>
+          <div class="mc-body">
+            <div class="mc-name">Vegetable Tasting Plate</div>
+            <div class="mc-desc">
+              Five preparations of seasonal vegetables, wood-fired, raw,
+              pickled, purée, and charred.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 1,100</span
+              ><span class="mc-pill">Vegetarian</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-28.webp"
+                alt="Wagyu Striploin"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">06</span>
+          <div class="mc-body">
+            <div class="mc-name">Wagyu Striploin</div>
+            <div class="mc-desc">
+              A4 Japanese Wagyu, tare glaze, pickled daikon, yuzu kosho butter,
+              micro shiso.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 3,200</span
+              ><span class="mc-pill">Premium Cut</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Desserts ────────────────────────────── -->
+      <div class="menu-panel menu-grid" id="tab-desserts" role="tabpanel">
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-12.webp"
+                alt="Dark Valrhona Sphere"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">01</span>
+          <div class="mc-body">
+            <div class="mc-name">Dark Valrhona Sphere</div>
+            <div class="mc-desc">
+              70% Guanaja sphere, liquid caramel core, wild berry compote,
+              smoked vanilla ice cream.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 480</span
+              ><span class="mc-pill">Signature</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-29.webp"
+                alt="Fire-Glazed Baklava"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">02</span>
+          <div class="mc-body">
+            <div class="mc-name">Fire-Glazed Baklava</div>
+            <div class="mc-desc">
+              Modern deconstructed baklava, caramelized honey, pistachio cream,
+              rose water foam.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 380</span
+              ><span class="mc-pill">Local Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img
+                src="images/photo-30.webp"
+                alt="Ember Crème Brûlée"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">03</span>
+          <div class="mc-body">
+            <div class="mc-name">Ember Crème Brûlée</div>
+            <div class="mc-desc">
+              Vanilla bean custard, torched tableside, orange blossom sugar
+              crust, seasonal fruits.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 340</span
+              ><span class="mc-pill">Classic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Wine List ───────────────────────────── -->
+      <div class="menu-panel menu-grid" id="tab-wine" role="tabpanel">
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img src="images/photo-31.webp" alt="Red Wine" loading="lazy" />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">01</span>
+          <div class="mc-body">
+            <div class="mc-name">Château Margaux 2018</div>
+            <div class="mc-desc">
+              Bordeaux, France. Rich blackcurrant, violet, cedar. Pairs with our
+              dry-aged beef cuts.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 8,500</span
+              ><span class="mc-pill">Red · Full-Bodied</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img src="images/photo-32.webp" alt="White Wine" loading="lazy" />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">02</span>
+          <div class="mc-body">
+            <div class="mc-name">Puligny-Montrachet 2020</div>
+            <div class="mc-desc">
+              Burgundy, France. Crisp citrus, white flowers, mineral finish.
+              Ideal with seafood.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 5,200</span
+              ><span class="mc-pill">White · Elegant</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mc">
+          <div class="mc-photo">
+            <div class="img-wrap">
+              <img src="images/photo-33.webp" alt="Champagne" loading="lazy" />
+            </div>
+          </div>
+          <div class="mc-ov"></div>
+          <span class="mc-num" aria-hidden="true">03</span>
+          <div class="mc-body">
+            <div class="mc-name">Krug Grande Cuvée</div>
+            <div class="mc-desc">
+              Champagne, France. Brioche, toasted almond, peach. The house
+              celebration wine.
+            </div>
+            <div class="mc-foot">
+              <span class="mc-price">EGP 7,800</span
+              ><span class="mc-pill">Champagne</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POST-MENU CTA SECTION START ===== -->
+    <div class="cta-band rv">
+      <div class="cta-band-text">
+        <h3>Ready to experience <em>the fire?</em></h3>
+        <p>
+          Join us for an evening you will remember long after the last bite.
+        </p>
+      </div>
+      <div class="cta-band-urgency">
+        <div class="urgency-tag">Limited seats available</div>
+        <div class="urgency-time">
+          Next available:
+          <strong style="color: var(--cream)">Tonight 8:30 PM</strong>
+        </div>
+      </div>
+      <a href="#reservation" class="btn-fire"><span>Reserve Now</span></a>
+    </div>
+    <!-- ===== POST-MENU CTA SECTION END ===== -->
+
+    <!-- ===== GALLERY SECTION START ===== -->
+    <div class="gallery" aria-label="Food photography gallery">
+      <div class="gal-track">
+        <!-- First set -->
+        <div class="gal-item">
+          <img src="images/photo-1.webp" alt="Fine dining" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img src="images/photo-16.webp" alt="Plated food" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img src="images/photo-2.webp" alt="Gourmet dish" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img src="images/photo-3.webp" alt="Culinary plate" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="images/photo-19.webp"
+            alt="Restaurant atmosphere"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="images/photo-20.webp"
+            alt="Dining experience"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img src="images/photo-21.webp" alt="Modern cuisine" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="images/photo-22.webp"
+            alt="Chef's creation"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="images/photo-17.webp"
+            alt="Seasonal ingredients"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img src="images/photo-18.webp" alt="Premium entree" loading="lazy" />
+          <div class="gal-ov"></div>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=520&q=80"
+            alt="Fine dining"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=520&q=80"
+            alt="Plated food"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=520&q=80"
+            alt="Gourmet dish"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=520&q=80"
+            alt="Culinary plate"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=520&q=80"
+            alt="Restaurant atmosphere"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=520&q=80"
+            alt="Dining experience"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=520&q=80"
+            alt="Modern cuisine"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=520&q=80"
+            alt="Chef's creation"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=520&q=80"
+            alt="Seasonal ingredients"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=520&q=80"
+            alt="Premium entree"
+            loading="lazy"
+          />
+          <div class="gal-ov"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== GALLERY SECTION END ===== -->
+
+    <!-- ===== EXPERIENCE SECTION START ===== -->
+    <section class="exp rv" id="experience">
+      <div class="exp-grid">
+        <!-- Photo collage -->
+        <div class="exp-photos">
+          <div class="ep1">
+            <div class="img-wrap">
+              <img
+                src="images/photo-13.webp"
+                alt="Chef at work"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="ep2">
+            <div class="img-wrap">
+              <img
+                src="images/photo-20.webp"
+                alt="Restaurant atmosphere"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="ep3">
+            <div class="img-wrap">
+              <img
+                src="images/photo-15.webp"
+                alt="Fine dining table"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="lbl">Why EMBER</div>
+          <h2 class="sec-title">An experience<br />beyond <em>flavor</em></h2>
+          <p class="body-txt">
+            We've crafted every element of your visit — from the first glance at
+            the menu to the final morsel — into a cohesive sensory ritual.
+          </p>
+          <ul class="feat-list">
+            <li class="feat">
+              <div class="feat-ico" aria-hidden="true">🔥</div>
+              <div>
+                <div class="feat-name">Live Fire Kitchen</div>
+                <div class="feat-desc">
+                  Watch our chefs work with open flames, wood-burning ovens, and
+                  ancient cooking techniques refreshed for the modern palate.
+                </div>
+              </div>
+            </li>
+            <li class="feat">
+              <div class="feat-ico" aria-hidden="true">🍷</div>
+              <div>
+                <div class="feat-name">3,000-Bottle Cellar</div>
+                <div class="feat-desc">
+                  Our master sommelier curates an extraordinary collection
+                  spanning six continents and five centuries of winemaking
+                  heritage.
+                </div>
+              </div>
+            </li>
+            <li class="feat">
+              <div class="feat-ico" aria-hidden="true">🌿</div>
+              <div>
+                <div class="feat-name">Farm-to-Flame</div>
+                <div class="feat-desc">
+                  Ingredients sourced daily from our partner farms and foraged
+                  from local landscapes — zero compromise on freshness.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ===== EXPERIENCE SECTION END ===== -->
+
+    <!-- ===== CHEF QUOTE BAND START ===== -->
+    <div class="band rv">
+      <div class="band-bg" aria-hidden="true"></div>
+      <div class="band-ov" aria-hidden="true"></div>
+      <div class="band-content">
+        <div class="band-inner">
+          <p class="band-quote">
+            "Fire is not a cooking technique. It is a <em>language</em> — and
+            every plate we send out is a sentence."
+          </p>
+          <div class="band-attr">
+            Chef Karim El-Masry · Executive Chef, EMBER since 2008
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== CHEF QUOTE BAND END ===== -->
+
+    <!-- ===== CHEF SECTION START ===== -->
+    <section class="chef rv" id="chef">
+      <div class="chef-grid">
+        <div class="chef-img">
+          <div class="img-wrap" style="height: 100%">
+            <img
+              src="images/photo-13.webp"
+              alt="Chef Karim El-Masry"
+              loading="lazy"
+            />
+          </div>
+          <div class="chef-badge">
+            <div class="chef-badge-name">Chef Karim El-Masry</div>
+            <div class="chef-badge-title">
+              Executive Chef & Co-Founder · EMBER since 2008
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="lbl">The Chef</div>
+          <h2 class="sec-title">
+            A lifetime devoted<br />to the <em>flame</em>
+          </h2>
+          <p class="body-txt">
+            Karim El-Masry trained under some of Europe's most demanding
+            kitchens — from Lyon to Copenhagen — before returning to Cairo with
+            a singular vision: to channel the primal power of fire into an
+            entirely new Egyptian culinary language.
+          </p>
+          <p class="body-txt">
+            His approach merges classical French technique with deeply local
+            ingredients and Middle Eastern spice philosophy, creating dishes
+            that feel both ancient and radically modern.
+          </p>
+          <div class="chef-accolades">
+            <span class="chef-acc-tag">Best Chef Cairo — 2022</span>
+            <span class="chef-acc-tag">Top 50 Restaurants MENA</span>
+            <span class="chef-acc-tag">Les Grandes Tables du Monde</span>
+            <span class="chef-acc-tag">Gault&amp;Millau — 17/20</span>
+            <span class="chef-acc-tag">Gold Fork Award 2023</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CHEF SECTION END ===== -->
+
+    <!-- ===== TESTIMONIALS SECTION START ===== -->
+    <section class="testi rv">
+      <div class="sec-hdr">
+        <div class="sec-tag">Guest Words</div>
+        <h2 class="ttl">What They <em>Say</em></h2>
+      </div>
+      <div class="tg">
+        <div class="tc">
+          <div class="tc-stars">★★★★★</div>
+          <p class="tc-q">
+            EMBER doesn't just serve food — it stages an emotional event. The
+            wagyu course alone moved me to silence. Truly a once-in-a-lifetime
+            evening.
+          </p>
+          <div class="tc-auth">
+            <div class="tc-av" aria-hidden="true">👤</div>
+            <div>
+              <div class="tc-name">Layla Al-Rashid</div>
+              <div class="tc-role">Food Critic, Cairo Post</div>
+              <div class="tc-verified">Verified Guest</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tc">
+          <div class="tc-stars">★★★★★</div>
+          <p class="tc-q">
+            I've dined in Paris, Tokyo, and New York. EMBER belongs in that
+            conversation. The attention to flame, texture, and timing is
+            obsessive in the best way.
+          </p>
+          <div class="tc-auth">
+            <div class="tc-av" aria-hidden="true">👤</div>
+            <div>
+              <div class="tc-name">Marcus Chen</div>
+              <div class="tc-role">Culinary Traveler · Singapore</div>
+              <div class="tc-verified">Verified Guest</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tc">
+          <div class="tc-stars">★★★★★</div>
+          <p class="tc-q">
+            We celebrated our anniversary here and it was perfect in every way.
+            The ambiance, the service, the food — each element felt handcrafted
+            just for us.
+          </p>
+          <div class="tc-auth">
+            <div class="tc-av" aria-hidden="true">👤</div>
+            <div>
+              <div class="tc-name">Nadia & Omar Karim</div>
+              <div class="tc-role">Anniversary Dinner · February 2026</div>
+              <div class="tc-verified">Verified Guest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== TESTIMONIALS SECTION END ===== -->
+
+    <!-- ===== RESERVATION SECTION START ===== -->
+    <section class="res" id="reservation">
+      <div class="res-in rv">
+        <div class="sec-tag">Book Your Evening</div>
+        <h2 class="ttl" style="font-size: clamp(2rem, 5vw, 3.6rem)">
+          Reserve Your <em>Table</em>
+        </h2>
+        <p class="body-txt" style="text-align: center; margin-top: 12px">
+          Secure your place at one of Cairo's most sought-after dining
+          experiences. We recommend booking at least one week in advance.
+        </p>
+        <div class="res-urgency">Limited seats remaining this week</div>
+
+        <!-- Reservation form -->
+        <div class="res-form" id="resForm">
+          <div class="fg">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              placeholder="Your first name"
+              autocomplete="given-name"
+            />
+            <span class="field-error">Required</span>
+          </div>
+          <div class="fg">
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              placeholder="Your last name"
+              autocomplete="family-name"
+            />
+            <span class="field-error">Required</span>
+          </div>
+          <div class="fg">
+            <label for="rdate">Date</label>
+            <input type="date" id="rdate" />
+            <span class="field-error">Please select a date</span>
+          </div>
+          <div class="fg">
+            <label for="rtime">Preferred Time</label>
+            <select id="rtime">
+              <option value="">Select time</option>
+              <option>6:00 PM</option>
+              <option>6:30 PM</option>
+              <option>7:00 PM</option>
+              <option>7:30 PM</option>
+              <option>8:00 PM</option>
+              <option>8:30 PM — Popular</option>
+              <option>9:00 PM</option>
+              <option>9:30 PM</option>
+            </select>
+            <span class="field-error">Please select a time</span>
+          </div>
+          <div class="fg">
+            <label for="rguests">Number of Guests</label>
+            <select id="rguests">
+              <option value="">Select guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7+ Guests — Please call us</option>
+            </select>
+            <span class="field-error">Required</span>
+          </div>
+          <div class="fg">
+            <label for="roccasion">Occasion</label>
+            <select id="roccasion">
+              <option value="">Select occasion</option>
+              <option>Dinner</option>
+              <option>Anniversary</option>
+              <option>Birthday</option>
+              <option>Business Dinner</option>
+              <option>Proposal</option>
+              <option>Private Event</option>
+            </select>
+          </div>
+          <div class="fg rf-full">
+            <label for="remail">Email Address</label>
+            <input
+              type="email"
+              id="remail"
+              placeholder="your@email.com"
+              autocomplete="email"
+            />
+            <span class="field-error">Valid email required</span>
+          </div>
+          <div class="fg rf-full">
+            <label for="rspecial">Special Requests</label>
+            <textarea
+              id="rspecial"
+              rows="3"
+              placeholder="Dietary requirements, allergies, special arrangements..."
+            ></textarea>
+          </div>
+          <button class="btn-res rf-full" id="submitRes" type="button">
+            Confirm Reservation
+          </button>
+        </div>
+
+        <!-- Confirmation state -->
+        <div class="res-confirm" id="resConfirm" aria-live="polite">
+          <div class="confirm-ico" aria-hidden="true">🕯️</div>
+          <h3 class="confirm-title">Reservation <em>Confirmed</em></h3>
+          <p class="confirm-sub">
+            Thank you, <span id="confirmName"></span>. Your table has been
+            reserved.<br />
+            A confirmation will be sent to your email shortly.
+          </p>
+          <div class="confirm-detail" id="confirmDetail"></div>
+          <button class="btn-back" id="btnBack" type="button">
+            Make another reservation
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ===== RESERVATION SECTION END ===== -->
+
+    <!-- ===== PRE-FOOTER CTA START ===== -->
+    <div class="pre-footer-cta rv">
+      <h2>Don't miss your <em>evening</em></h2>
+      <p>
+        Tables fill quickly, especially on weekends. Secure your reservation
+        today and let us take care of everything else.
+      </p>
+      <a href="#reservation" class="btn-fire"
+        ><span>Reserve Your Table →</span></a
+      >
+      <div class="pfc-urgency">Next available booking: Tonight 8:30 PM</div>
+    </div>
+    <!-- ===== PRE-FOOTER CTA END ===== -->
+
+    <!-- ===== CONTACT & LOCATION START ===== -->
+    <section class="contact-sec rv" id="contact-sec">
+      <div class="sec-hdr" style="margin-bottom: 52px">
+        <div class="sec-tag">Find Us</div>
+        <h2 class="ttl">Location &amp; <em>Hours</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block">
+            <div class="contact-block-ttl">Address</div>
+            <p>12 Zamalek Corniche<br />Zamalek, Cairo 11211, Egypt</p>
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                color: var(--gold);
+                margin-top: 6px;
+                font-family: &quot;Cinzel&quot;, serif;
+                font-size: 0.62rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              "
+              >Get Directions →</a
+            >
+          </div>
+          <div class="contact-block">
+            <div class="contact-block-ttl">Phone &amp; Email</div>
+            <a href="tel:+20212345678">+20 2 1234 5678</a>
+            <a href="mailto:hello@emberrestaurant.com"
+              >hello@emberrestaurant.com</a
+            >
+          </div>
+          <div class="contact-block">
+            <div class="contact-block-ttl">Opening Hours</div>
+            <div class="hours-row">
+              <span class="hours-day">Monday – Thursday</span
+              ><span class="hours-time">6:00 PM – 11:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Friday – Saturday</span
+              ><span class="hours-time">6:00 PM – 1:00 AM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sunday</span
+              ><span class="hours-closed">Closed</span>
+            </div>
+            <p
+              style="
+                margin-top: 14px;
+                font-size: 0.82rem;
+                color: rgba(245, 237, 216, 0.3);
+                font-style: italic;
+              "
+            >
+              Kitchen closes 90 minutes before closing time.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.5!2d31.2236!3d30.0626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAzJzQ1LjQiTiAzMcKwMTMnMjUuMCJF!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="EMBER Restaurant Location"
+            >
+            </iframe>
+            <div class="map-pin-overlay">
+              <strong>EMBER Restaurant</strong>
+              <span>12 Zamalek Corniche, Cairo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CONTACT & LOCATION END ===== -->
+
+    <!-- ===== FOOTER START ===== -->
+    <footer id="contact">
+      <div class="ft">
+        <div>
+          <div class="fb-name">EMB<b>E</b>R</div>
+          <p class="fb-tag">
+            Where fire transforms ingredients into unforgettable memories.
+            Cairo's most celebrated culinary destination since 2008.
+          </p>
+          <div class="fb-social">
+            <a href="#" class="fb-soc-btn" title="X" aria-label="Twitter">𝕏</a>
+            <a
+              href="#"
+              class="fb-soc-btn"
+              title="Instagram"
+              aria-label="Instagram"
+              >◎</a
+            >
+            <a
+              href="#"
+              class="fb-soc-btn"
+              title="Facebook"
+              aria-label="Facebook"
+              >𝔽</a
+            >
+          </div>
+        </div>
+
+        <div>
+          <div class="fc-ttl">Explore</div>
+          <ul class="fc-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#menu">Wine List</a></li>
+            <li><a href="#reservation">Private Dining</a></li>
+            <li><a href="#chef">The Chef</a></li>
+            <li><a href="#contact-sec">Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="fc-ttl">Visit</div>
+          <ul class="fc-links">
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >12 Zamalek Corniche</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cairo, Egypt 11211</a
+              >
+            </li>
+            <li><a href="tel:+20212345678">+20 2 1234 5678</a></li>
+            <li>
+              <a href="mailto:hello@emberrestaurant.com"
+                >hello@emberrestaurant.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="fc-ttl">Hours</div>
+          <ul class="fc-links">
+            <li><a href="#">Mon–Thu: 6pm–11pm</a></li>
+            <li><a href="#">Fri–Sat: 6pm–1am</a></li>
+            <li>
+              <a href="#" style="color: rgba(255, 69, 0, 0.5)"
+                >Sunday: Closed</a
+              >
+            </li>
+            <li style="margin-top: 16px">
+              <a href="#reservation" style="color: var(--gold)"
+                >Reserve a Table →</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fb-btm">
+        <span>© 2026 <a href="#">Eyad Ashraf</a>. All rights reserved.</span>
+        <span>Crafted with fire &amp; passion · Cairo, Egypt</span>
+      </div>
+    </footer>
+    <!-- ===== FOOTER END ===== -->
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="script.js"></script>
+  </body>
+</html>

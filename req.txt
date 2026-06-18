@@ -1,0 +1,7 @@
+Refactor this JavaScript:
+- Split into functions (loader, nav, hero)
+- Remove magic numbers
+- Add constants
+- Keep same functionality
+- Ensure no errors and code runs smoothly
+- Ensure every part has comments to tell its role

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eyad Ashraf">
+    <title>EMBER — Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0602;
+            color: #f5edd8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #130e06;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 40px 50px;
+            border-radius: 4px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #f5edd8;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+            padding-bottom: 20px;
+        }
+        h1 span {
+            color: #ff4500;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #c29723;
+            margin: 36px 0 16px;
+            border-left: 3px solid #ff4500;
+            padding-left: 18px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            color: #f5edd8;
+            margin: 24px 0 10px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: rgba(245, 237, 216, 0.8);
+        }
+        code {
+            background: rgba(255, 69, 0, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            color: #ff6b35;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+        }
+        pre {
+            background: #0a0602;
+            padding: 18px 22px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            border: none;
+            color: #f5edd8;
+        }
+        ul, ol {
+            margin: 12px 0 20px 24px;
+            color: rgba(245, 237, 216, 0.8);
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #c29723;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+        }
+        a:hover {
+            color: #ff6b35;
+            border-bottom-color: #ff6b35;
+        }
+        .note {
+            background: rgba(255, 69, 0, 0.08);
+            border-left: 3px solid #ff4500;
+            padding: 16px 22px;
+            margin: 24px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .note strong {
+            color: #ff6b35;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+        th {
+            color: #c29723;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        td {
+            color: rgba(245, 237, 216, 0.8);
+        }
+        td:first-child {
+            font-family: monospace;
+            color: #ff6b35;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(201, 168, 76, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(245, 237, 216, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EMBER <span>—</span> Documentation</h1>
+        <p style="font-size: 1.1rem; margin-bottom: 32px;">Luxury Restaurant HTML Template · Version 1.0</p>
+        
+        <p>Thank you for purchasing EMBER! This documentation will guide you through customizing the template for your restaurant. If you have any questions beyond what's covered here, please contact me via my ThemeForest profile.</p>
+
+        <div class="note">
+            <strong>⚡ Quick Start:</strong> This is a static HTML template. You can edit it with any code editor (VS Code, Sublime Text, Notepad++). No build tools or npm required.
+        </div>
+
+        <!-- ===== FILE STRUCTURE ===== -->
+        <h2>📁 File Structure</h2>
+        <p>After unzipping, you'll see this structure:</p>
+        <pre><code>ember-template/
+├── index.html          # Main HTML file (edit content here)
+├── styles.css          # All styling (edit colors/fonts here)
+├── script.js           # JavaScript functionality
+├── images/             # All template images
+│   ├── hero-img.webp
+│   ├── photo-1.webp
+│   ├── photo-2.webp
+│   └── ... (33 images total)
+└── documentation.html  # This file</code></pre>
+
+        <!-- ===== GETTING STARTED ===== -->
+        <h2>🚀 Getting Started</h2>
+        <h3>1. Open the Files</h3>
+        <p>Open the entire folder in your code editor. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> (free).</p>
+        
+        <h3>2. Preview Locally</h3>
+        <p>Double-click <code>index.html</code> to open it in your browser. You'll see the template with placeholder content.</p>
+        
+        <h3>3. Start Editing</h3>
+        <p>Open <code>index.html</code> and start replacing the placeholder text with your restaurant's information. The most common edits are covered below.</p>
+
+        <!-- ===== TEXT & CONTENT ===== -->
+        <h2>✏️ Editing Text & Content</h2>
+        <p>All visible text lives in <code>index.html</code>. Use Ctrl+F (Cmd+F on Mac) to find specific text.</p>
+        
+        <h3>Restaurant Name</h3>
+        <p>Search for <code>EMB<b>E</b>R</code> — it appears in the navigation, loader, and footer. Replace with your restaurant name.</p>
+        <pre><code>&lt;!-- Navigation logo --&gt;
+&lt;a href="#" class="n-logo"&gt;YOUR<b>NAME</b>&lt;/a&gt;
+
+&lt;!-- Footer name --&gt;
+&lt;div class="fb-name"&gt;YOUR<b>NAME</b>&lt;/div&gt;</code></pre>
+
+        <h3>Hero Section</h3>
+        <p>Search for <code>WHERE FIRE MEETS ART</code> in index.html. You'll find:</p>
+        <pre><code>&lt;h1 class="hero-title"&gt;
+    &lt;span class="ol"&gt;WHERE&lt;/span&gt;
+    &lt;em&gt;Fire&lt;/em&gt;
+    &lt;span&gt;MEETS ART&lt;/span&gt;
+&lt;/h1&gt;
+&lt;p class="hero-desc"&gt;
+    An extraordinary culinary journey...
+&lt;/p&gt;</code></pre>
+
+        <h3>About Section</h3>
+        <p>Search for <code>Passion ignited into</code> to find the About section text.</p>
+
+        <h3>Chef Section</h3>
+        <p>Search for <code>Chef Karim El-Masry</code> to update the chef's name, title, and bio.</p>
+
+        <h3>Contact Information</h3>
+        <p>Search for:</p>
+        <ul>
+            <li><code>12 Zamalek Corniche</code> — Address</li>
+            <li><code>+20 2 1234 5678</code> — Phone number</li>
+            <li><code>hello@emberrestaurant.com</code> — Email</li>
+            <li><code>6:00 PM – 11:00 PM</code> — Hours</li>
+        </ul>
+
+        <!-- ===== IMAGES ===== -->
+        <h2>🖼️ Replacing Images</h2>
+        <p>All images are stored in the <code>/images/</code> folder. To replace an image:</p>
+        <ol>
+            <li>Add your new image to the <code>/images/</code> folder</li>
+            <li>Find the <code>&lt;img&gt;</code> tag in <code>index.html</code> referencing the old image</li>
+            <li>Change the <code>src</code> attribute to your new filename</li>
+        </ol>
+
+        <h3>Important Images & Their Locations</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Location in index.html</th>
+                    <th>Recommended Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>hero-img.webp</td>
+                    <td>Hero section (line ~480)</td>
+                    <td>1920×1080px</td>
+                </tr>
+                <tr>
+                    <td>photo-4.webp</td>
+                    <td>About section — chef cooking</td>
+                    <td>800×1000px</td>
+                </tr>
+                <tr>
+                    <td>photo-5.webp</td>
+                    <td>About section — dish close-up</td>
+                    <td>800×800px</td>
+                </tr>
+                <tr>
+                    <td>photo-7 to 12</td>
+                    <td>Menu — Starters section</td>
+                    <td>600×800px</td>
+                </tr>
+                <tr>
+                    <td>photo-23 to 28</td>
+                    <td>Menu — Mains section</td>
+                    <td>600×800px</td>
+                </tr>
+                <tr>
+                    <td>photo-13.webp</td>
+                    <td>Chef section</td>
+                    <td>800×1000px</td>
+                </tr>
+                <tr>
+                    <td>photo-1 to 3, 16-22</td>
+                    <td>Gallery strip</td>
+                    <td>520×400px</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>💡 Tip:</strong> Keep image file sizes under 300KB for fast loading. Use <a href="https://squoosh.app/" target="_blank">Squoosh</a> (free) to compress images.
+        </div>
+
+        <!-- ===== COLORS ===== -->
+        <h2>🎨 Changing Colors</h2>
+        <p>All colors are defined as CSS variables at the top of <code>styles.css</code>. Change them once, and the entire site updates.</p>
+        
+        <p>Open <code>styles.css</code> and find this section (lines 5-14):</p>
+        <pre><code>:root {
+  --ember: #ff4500;      /* Primary accent — buttons, highlights */
+  --gold: #c29723;       /* Secondary accent — borders, prices */
+  --deep: #0a0602;       /* Darkest background */
+  --ash: #130e06;        /* Slightly lighter background */
+  --cream: #f5edd8;      /* Main text color */
+  --flame: #ff6b35;      /* Hover states */
+  --nav-h: 80px;
+  --pad-x: 60px;
+}</code></pre>
+
+        <h3>Example: Changing from Orange to Blue Theme</h3>
+        <pre><code>:root {
+  --ember: #0066cc;      /* Changed from #ff4500 */
+  --gold: #c29723;       /* Keep gold accents or change */
+  --flame: #3388ff;      /* Changed from #ff6b35 */
+  /* ... rest unchanged ... */
+}</code></pre>
+        <p>Save the file, refresh your browser, and all orange elements become blue.</p>
+
+        <!-- ===== MENU ITEMS ===== -->
+        <h2>🍽️ Updating Menu Items</h2>
+        <p>Menu items are organized in tabs (Starters, Mains, Desserts, Wine). Each item follows this structure:</p>
+        
+        <pre><code>&lt;div class="mc"&gt;
+    &lt;div class="mc-photo"&gt;
+        &lt;div class="img-wrap"&gt;
+            &lt;img src="images/photo-7.webp" alt="Wagyu Tartare" loading="lazy"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mc-ov"&gt;&lt;/div&gt;
+    &lt;span class="mc-num" aria-hidden="true"&gt;01&lt;/span&gt;
+    &lt;div class="mc-body"&gt;
+        &lt;div class="mc-name"&gt;Wagyu Tartare&lt;/div&gt;
+        &lt;div class="mc-desc"&gt;
+            Hand-cut A5 Wagyu, smoked egg yolk, black truffle...
+        &lt;/div&gt;
+        &lt;div class="mc-foot"&gt;
+            &lt;span class="mc-price"&gt;EGP 1,250&lt;/span&gt;
+            &lt;span class="mc-pill"&gt;Chef's Pick&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>To add a new menu item:</p>
+        <ol>
+            <li>Copy an entire <code>&lt;div class="mc"&gt;</code> block</li>
+            <li>Paste it before the closing <code>&lt;/div&gt;</code> of the menu panel</li>
+            <li>Update the image, name, description, price, and pill text</li>
+            <li>Update the <code>mc-num</code> to the next number</li>
+        </ol>
+
+        <p>To remove an item, simply delete its entire <code>&lt;div class="mc"&gt;</code> block.</p>
+
+        <!-- ===== RESERVATION FORM ===== -->
+        <h2>📅 Reservation Form Setup</h2>
+        <p>The reservation form is currently frontend-only with validation. To make it actually send emails, you have several options:</p>
+
+        <h3>Option 1: Formspree (Easiest, Free Tier)</h3>
+        <ol>
+            <li>Go to <a href="https://formspree.io/" target="_blank">formspree.io</a> and create a free account</li>
+            <li>Create a new form and get your form ID (looks like <code>xaygnkyo</code>)</li>
+            <li>In <code>index.html</code>, find the reservation form (search for <code>id="resForm"</code>)</li>
+            <li>Add these attributes to the <code>&lt;form&gt;</code> tag:</li>
+        </ol>
+        <pre><code>&lt;form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"&gt;</code></pre>
+        <p>Make sure all inputs have <code>name</code> attributes. Add them if missing:</p>
+        <pre><code>&lt;input type="text" id="fname" name="first_name" ...&gt;
+&lt;input type="email" id="remail" name="email" ...&gt;</code></pre>
+
+        <h3>Option 2: Google Sheets (Free, Unlimited)</h3>
+        <p>Use a service like <a href="https://sheetmonkey.io/" target="_blank">Sheetmonkey</a> to send form submissions directly to Google Sheets.</p>
+
+        <h3>Option 3: PHP Backend (If You Have Server Access)</h3>
+        <p>Create a <code>send-reservation.php</code> file and point the form action to it.</p>
+
+        <div class="note">
+            <strong>📧 Current Behavior:</strong> Without a backend, the form shows a "Confirmed" message but doesn't actually send data anywhere. This is fine for demo purposes, but set up Formspree before going live.
+        </div>
+
+        <!-- ===== GOOGLE MAPS ===== -->
+        <h2>🗺️ Google Maps</h2>
+        <p>The map is embedded via an iframe. To update it with your restaurant's location:</p>
+        <ol>
+            <li>Go to <a href="https://maps.google.com" target="_blank">Google Maps</a> and search for your address</li>
+            <li>Click "Share" → "Embed a map"</li>
+            <li>Copy the iframe code</li>
+            <li>In <code>index.html</code>, search for <code>maps/embed?pb=</code></li>
+            <li>Replace the entire <code>src</code> attribute value with your copied code's src</li>
+        </ol>
+        <pre><code>&lt;iframe 
+    src="YOUR_NEW_EMBED_URL"
+    allowfullscreen="" 
+    loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+
+        <!-- ===== SEO ===== -->
+        <h2>🔍 SEO Settings</h2>
+        <p>Update the meta tags in the <code>&lt;head&gt;</code> section of <code>index.html</code>:</p>
+        <pre><code>&lt;title&gt;YOUR RESTAURANT NAME — Fine Dining Cairo&lt;/title&gt;
+&lt;meta name="description" content="Your restaurant description here..."&gt;
+&lt;meta property="og:title" content="YOUR RESTAURANT NAME — Fine Dining"&gt;
+&lt;meta property="og:description" content="Your description..."&gt;</code></pre>
+
+        <!-- ===== FAVICON ===== -->
+        <h2>🔖 Changing the Favicon</h2>
+        <p>The favicon is currently an inline SVG emoji. To use your own logo:</p>
+        <ol>
+            <li>Create a favicon at <a href="https://favicon.io/" target="_blank">favicon.io</a></li>
+            <li>Save the generated files to your <code>/images/</code> folder</li>
+            <li>Replace the favicon link in <code>index.html</code> (around line 15):</li>
+        </ol>
+        <pre><code>&lt;link rel="icon" type="image/x-icon" href="images/favicon.ico"&gt;</code></pre>
+
+        <!-- ===== CREDITS ===== -->
+        <h2>📋 Credits & Attribution</h2>
+        <h3>Fonts Used</h3>
+        <ul>
+            <li><strong>Playfair Display</strong> — Google Fonts (headings)</li>
+            <li><strong>Cormorant Garamond</strong> — Google Fonts (body text)</li>
+            <li><strong>Bebas Neue</strong> — Google Fonts (logo, numbers)</li>
+            <li><strong>Cinzel</strong> — Google Fonts (navigation, labels)</li>
+        </ul>
+
+        <h3>Demo Images</h3>
+        <p>The placeholder images in this template are from <strong>Pexels</strong> and <strong>Unsplash</strong>, free for commercial use with attribution. You should replace them with your own restaurant photography before launching.</p>
+        
+        <p>Image credits (for reference):</p>
+        <ul style="font-size: 0.85rem;">
+            <li>hero-img.webp — Photo by Jay Wennington on Unsplash</li>
+            <li>photo-4.webp — Photo by Louis Hansel on Unsplash</li>
+            <li>photo-5.webp — Photo by Brodie Vissers on Unsplash</li>
+            <li>photo-7.webp — Photo by Casey Lee on Unsplash</li>
+            <li>photo-8.webp — Photo by Davide Cantelli on Unsplash</li>
+            <li>photo-9.webp — Photo by Anna Pelzer on Unsplash</li>
+            <li>photo-10.webp — Photo by Mariana Medvedeva on Unsplash</li>
+            <li>photo-11.webp — Photo by Nik Owens on Unsplash</li>
+            <li>photo-12.webp — Photo by Mockup Graphics on Unsplash</li>
+            <li>photo-13.webp — Photo by Sebastian Coman Photography on Unsplash</li>
+            <li>photo-15.webp — Photo by Spencer Davis on Unsplash</li>
+            <li>photo-16.webp — Photo by Jimi Filipovski on Unsplash</li>
+            <li>photo-17.webp — Photo by Edson Saldaña on Unsplash</li>
+            <li>photo-18.webp — Photo by Eiliv Aceron on Unsplash</li>
+            <li>photo-19.webp — Photo by Chan Walrus on Pexels</li>
+            <li>photo-20.webp — Photo by Rachel Claire on Pexels</li>
+            <li>photo-21.webp — Photo by Valeria Boltneva on Pexels</li>
+            <li>photo-22.webp — Photo by Cottonbro Studio on Pexels</li>
+            <li>photo-23.webp — Photo by Lukasz Rawa on Unsplash</li>
+            <li>photo-24.webp — Photo by Louis Hansel on Unsplash</li>
+            <li>photo-25.webp — Photo by Emerson Vieira on Unsplash</li>
+            <li>photo-26.webp — Photo by CA Creative on Unsplash</li>
+            <li>photo-27.webp — Photo by Yoav Aziz on Unsplash</li>
+            <li>photo-28.webp — Photo by Chad Montano on Unsplash</li>
+            <li>photo-29.webp — Photo by Foodie Factor on Pexels</li>
+            <li>photo-30.webp — Photo by ROMAN ODINTSOV on Pexels</li>
+            <li>photo-31.webp — Photo by Tembela Bohle on Pexels</li>
+            <li>photo-32.webp — Photo by Mister Mister on Pexels</li>
+            <li>photo-33.webp — Photo by cottonbro studio on Pexels</li>
+        </ul>
+
+        <h3>JavaScript Libraries</h3>
+        <p>This template uses <strong>no external JavaScript libraries</strong> — only vanilla JavaScript. No jQuery, no dependencies.</p>
+
+        <!-- ===== BROWSER SUPPORT ===== -->
+        <h2>🌐 Browser Support</h2>
+        <p>EMBER works on all modern browsers:</p>
+        <ul>
+            <li>✅ Chrome 90+</li>
+            <li>✅ Firefox 88+</li>
+            <li>✅ Safari 14+</li>
+            <li>✅ Edge 90+</li>
+            <li>✅ Opera 76+</li>
+            <li>⚠️ Internet Explorer — Not supported</li>
+        </ul>
+
+        <!-- ===== TROUBLESHOOTING ===== -->
+        <h2>🔧 Troubleshooting</h2>
+        
+        <h3>Images aren't loading</h3>
+        <ul>
+            <li>Check that image filenames match exactly (case-sensitive)</li>
+            <li>Verify images are in the <code>/images/</code> folder</li>
+            <li>Try using .jpg instead of .webp if your server doesn't support WebP</li>
+        </ul>
+
+        <h3>Custom cursor isn't working</h3>
+        <ul>
+            <li>Custom cursor only appears on desktop (screen width > 768px)</li>
+            <li>If you're on a touchscreen device, it's disabled by design</li>
+        </ul>
+
+        <h3>Reservation form shows errors but fields are filled</h3>
+        <ul>
+            <li>Make sure you selected a time and number of guests (not just typed)</li>
+            <li>Email must be in format: name@domain.com</li>
+        </ul>
+
+        <h3>Colors aren't changing after editing CSS variables</h3>
+        <ul>
+            <li>Hard refresh your browser (Ctrl+Shift+R or Cmd+Shift+R)</li>
+            <li>Check for typos in the color codes (must start with #)</li>
+        </ul>
+
+        <!-- ===== SUPPORT ===== -->
+        <h2>💬 Support</h2>
+        <p>If you need help beyond this documentation:</p>
+        <ul>
+            <li>📧 Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li>💬 ThemeForest: Use the comments section on your purchase page</li>
+            <li>⏰ Response time: Within 24-48 hours</li>
+        </ul>
+
+        <div class="note">
+            <strong>⭐ Enjoying EMBER?</strong> Please consider leaving a 5-star rating on ThemeForest. It helps other restaurants find this template and supports future updates!
+        </div>
+
+        <!-- ===== CHANGELOG ===== -->
+        <h2>📝 Changelog</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Version</th>
+                    <th>Date</th>
+                    <th>Changes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.0</td>
+                    <td>April 2026</td>
+                    <td>Initial release</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>EMBER — Luxury Restaurant HTML Template</p>
+            <p>© 2026 Eyad ASHRAF. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

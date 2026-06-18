@@ -1,0 +1,15 @@
+IMAGE ATTRIBUTIONS — EMBER Template
+
+The placeholder images included in this template are sourced from
+free stock photography websites (Unsplash.com and Pexels.com).
+
+These images are included for demonstration purposes only.
+The buyer MUST replace all placeholder images with their own
+photography or properly licensed images before launching the website.
+
+For reference, similar images can be found at:
+- Unsplash.com (search: fine dining, restaurant, gourmet)
+- Pexels.com (search: food photography, chef, restaurant)
+
+The seller does not claim ownership of any placeholder images.
+All trademarks and copyrights belong to their respective owners.
